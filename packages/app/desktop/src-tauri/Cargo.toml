@@ -1,0 +1,19 @@
+[package]
+name = "opendaw-desktop"
+version = "0.0.168"
+description = "Native desktop shell for openDAW Studio"
+authors = ["openDAW contributors"]
+edition = "2021"
+license = "LGPL-3.0-or-later"
+
+[lib]
+name = "opendaw_desktop_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+tauri = { version = "2", features = [] }
+vst3-host = { version = "0.9.0", default-features = false }
