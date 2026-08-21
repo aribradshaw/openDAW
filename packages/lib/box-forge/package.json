@@ -9,9 +9,9 @@
   },
   "scripts": {
     "lint": "eslint \"**/*.ts\"",
-    "clear": "rm -rf ./test/gen/*",
+    "clear": "node scripts/clear-generated.mjs",
     "forge": "npx tsx test/schema.ts",
-    "format": "prettier --write \"./test/gen/**/*.ts\" --ignore-path /dev/null",
+    "format": "prettier --write \"./test/gen/**/*.ts\" --ignore-path .prettierignore",
     "gen": "npm run clear && npm run forge && npm run format",
     "test": "npm run gen && vitest run"
   },

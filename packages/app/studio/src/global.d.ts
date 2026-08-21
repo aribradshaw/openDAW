@@ -35,3 +35,9 @@ interface AudioContext {
     get sinkId(): AudioSinkInfo
     readonly playbackStats?: AudioPlaybackStats
 }
+
+interface Window {
+    MonacoEnvironment: {
+        getWorker(workerId: string, label: string): Worker
+    }
+}

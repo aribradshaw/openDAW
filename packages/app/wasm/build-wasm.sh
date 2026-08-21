@@ -4,7 +4,7 @@
 # dist/wasm into public/wasm/ for the dev server + tests, and adds the app-only standalone sine demo
 # (its own memory, default build).
 set -e
-. "$HOME/.cargo/env"
+if [ -f "$HOME/.cargo/env" ]; then . "$HOME/.cargo/env"; fi
 ROOT="$(cd "$(dirname "$0")/../../.." && pwd)"
 sh "$ROOT/packages/studio/core-wasm/build-wasm.sh"
 cd "$ROOT/crates"

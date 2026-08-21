@@ -11,7 +11,7 @@
 #                       of distinct devices coexist in the one memory with no fixed --global-base.
 #                       Same memory import as the engine.
 set -e
-. "$HOME/.cargo/env"
+if [ -f "$HOME/.cargo/env" ]; then . "$HOME/.cargo/env"; fi
 ROOT="$(cd "$(dirname "$0")/../../.." && pwd)"
 cd "$ROOT/crates"
 TARGET=wasm32-unknown-unknown

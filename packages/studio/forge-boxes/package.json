@@ -8,8 +8,8 @@
   },
   "scripts": {
     "lint": "eslint \"**/*.ts\"",
-    "format": "prettier --write \"../boxes/src/**/*.ts\" --ignore-path /dev/null",
-    "clear": "rm -rf ../boxes/src/*",
+    "format": "prettier --write \"../boxes/src/**/*.ts\" --ignore-path .prettierignore",
+    "clear": "node scripts/clear-generated.mjs",
     "build": "npm run clear && npx tsx src/forge.ts && npm run format",
     "test": "echo \"No tests to run\""
   },

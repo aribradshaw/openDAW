@@ -25,6 +25,6 @@
   "devDependencies": {
     "@opendaw/eslint-config": "^0.0.28",
     "@opendaw/typescript-config": "^0.0.32",
-    "vitest": "^1.6.0"
+    "vitest": "^4.1.10"
   }
 }
